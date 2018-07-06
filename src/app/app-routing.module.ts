@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PersonComponent } from './components/person/person.component';
 import { HomeComponent } from './components/home/home.component';
-import {PersonRegistrationComponent} from './components/view-person/ViewPersonComponent';
+import { ViewPersonComponent } from './components/view-person/view-person.component';
+
+
 
 const routes: Routes = [
   {
@@ -10,9 +12,9 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'admin/view/:id',
-    component: PersonRegistrationComponent
-  }
+    path: 'people/view/:id',
+    component: ViewPersonComponent
+  },
   {
     path: 'people',
     component: PersonComponent

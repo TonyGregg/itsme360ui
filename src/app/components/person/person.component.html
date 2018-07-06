@@ -8,7 +8,8 @@
         </tr>
         <tr *ngFor="let person of people">
             <td>
-                {{person.id}}
+
+                <a [routerLink]="['/people/view',person.id]">{{person.id}}</a>
               </td>
           <td>
             {{person.name}}

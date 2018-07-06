@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PersonalService} from '../../services/personal.service';
 import {ActivatedRoute} from '@angular/router';
+import {Person} from '../person/Person';
 
 @Component({
   selector: 'app-view-person',
@@ -18,7 +19,7 @@ export class ViewPersonComponent implements OnInit {
   getOnePerson(id: number) {
     this.personService.getPerson(id).subscribe(
 
-      data => {
+      (data: Person) => {
         this.person = data;
       },
       err => {
