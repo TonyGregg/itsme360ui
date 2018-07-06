@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+      <tr>
+          <th>Person Id</th>
+          <th>Person Name</th>
+          <th>Email</th>
+
+        </tr>
+        <tr *ngFor="let person of people">
+            <td>
+                {{person.id}}
+              </td>
+          <td>
+            {{person.name}}
+          </td>
+          <td>
+            {{person.email}}
+          </td>
+
+        </tr>
+
+  </table>
+</div>
