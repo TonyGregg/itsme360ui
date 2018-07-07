@@ -30,4 +30,8 @@ export class PersonalService {
     return this.http.post('/server/api/v1/persons', body, httpOptions);
   }
 
+  deletePerson(person: Person) {
+    return this.http.delete('/server/api/v1/persons' + '/' + person.id);
+  }
+
 }

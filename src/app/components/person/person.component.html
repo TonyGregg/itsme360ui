@@ -1,24 +1,29 @@
 <div class="container">
-  <table class="table table-bordered table-inverse">
+  <table class="table table-bordered table-striped">
+    <thead>
+
       <tr>
-          <th>Person Id</th>
-          <th>Person Name</th>
-          <th>Email</th>
+        <th>Person Id</th>
+        <th>Person Name</th>
+        <th>Email</th>
 
-        </tr>
-        <tr *ngFor="let person of people">
-            <td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>
 
-                <a [routerLink]="['/people/view',person.id]">{{person.id}}</a>
-              </td>
-          <td>
-            {{person.name}}
-          </td>
-          <td>
-            {{person.email}}
-          </td>
+          <a [routerLink]="['/people/view',person.id]">{{person.id}}</a>
+        </td>
+        <td>
+          {{person.name}}
+        </td>
+        <td>
+          {{person.email}}
+        </td>
+        <td><button class="btn btn-danger" (click)="deletePerson(person)">Delete User</button>
 
-        </tr>
-
+      </tr>
+    </tbody>
   </table>
 </div>

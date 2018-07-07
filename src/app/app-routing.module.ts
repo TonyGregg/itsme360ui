@@ -12,11 +12,15 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'add',
+    component: HomeComponent
+  },
+  {
     path: 'people/view/:id',
     component: ViewPersonComponent
   },
   {
-    path: 'people',
+    path: 'users',
     component: PersonComponent
   }
 ];

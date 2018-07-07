@@ -33,5 +33,11 @@ export class PersonComponent implements OnInit {
     );
   } // end of method fetchAllPeopleInfo
 
+  deletePerson(person: Person): void {
+    this.personalService.deletePerson(person).subscribe( data => {
+      this.people = this.people.filter(p => p !== person);
+    });
+  }
+
 
 }
